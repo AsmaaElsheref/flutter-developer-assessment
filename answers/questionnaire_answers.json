@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-31T01:30:31.274Z",
+    "assessment_version": "1.0",
+    "company": "UTD Software"
+  },
+  "about_you": {
+    "full_name": "Asmaa Elsheref",
+    "email": "asmaaelsheref00@gmail.com",
+    "github_username": "AsmaaElsheref",
+    "flutter_experience": "3-5",
+    "total_dev_experience": "3-5"
+  },
+  "skills_self_assessment": {
+    "bloc_flutter_bloc": 5,
+    "clean_architecture": 5,
+    "firebase": 5,
+    "cicd_devops": 5,
+    "testing": 5,
+    "realtime_websocket": 5,
+    "performance_devtools": 5
+  },
+  "technical_knowledge": {
+    "q8_complex_feature": "One of the most challenging things I worked on was building a TV app where I had to handle focus manually for each widget and control navigation using the remote. I created a structure where each screen manages its own focus and movement between elements. The main challenge was making the navigation smooth and consistent across the app.",
+    "q9_stateful_vs_bloc": "I use StatefulWidget for simple, local UI state that belongs only to one widget, such as animations, tab selection, text field visibility, or temporary toggles.\nI use BLoC when the feature has business logic, async operations, multiple UI states, validation, pagination, API calls, or state that needs to be shared across widgets/screens.\nI prefer BLoC when I need clearer separation of concerns, better testability, and easier scaling.",
+    "q10_code_output": "The output is:\n4\ntrue\nThis is because list2 is not a copy of list1, but a reference to the same list in memory.\nWhen we call list2.add(4) => it modifies the original list.",
+    "q11_bloc_bug": "The issue is that state does not update immediately after calling emit.\nBoth emit(state + 1) calls use the same old state value, so the final result is 1 not 2.\nTo fix this, we should calculate the new value once => emit(state + 2) or store the intermediate value in a variable before emitting.",
+    "q12_const_sizedbox": "const SizedBox is created at compile time and reused across rebuilds, which avoids unnecessary object creation and improves performance.\nSizedBox() creates a new instance on every build, adding overhead to the widget tree diffing process.",
+    "q13_friday_bug": "Step 1: Assess Severity\nWhat is broken, whether it’s a crash, data issue, or UI problem, who is affected, and how frequently it occurs.\n\nStep 2: Immediate Triage\nCheck crash logs like (Firebase Crashlytics)\nCheck recent deployments => what changed in the last release\nReproduce locally if possible\n\nStep 3: Communicate Early\nNotify the team immediately.\nInform the lead that there is a critical issue under investigation, especially if it is user facing.\n\nStep 4: Hotfix or Rollback Decision\nRollback => when bug is catastrophic, fix is complex\nHotfix => when bug is isolated, fix is small & safe\nFeature flag off => if the bug is behind a flag.\n\nStep 5: Fix with Discipline\nWrite the fix on a separate branch\nTest the fix on staging before pushing\nGet a quick code review.\n\nStep 6: Deploy & Monitor\nDeploy hotfix\nWatch real-time logs and crash rates\nConfirm the issue is resolved.\n\nStep 7: Post Mortem\nRoot cause analysis => why did it happen\nWhy wasn't it caught in testing\nImprove test so it never happens again\nDocument it for the team."
+  },
+  "how_you_work": {
+    "q14_architecture_disagreement": "In one project, I disagreed with a backend response format.\nHowever, the web developer preferred keeping the existing response format to avoid breaking their implementation. Instead of pushing the change, I explained my perspective and the benefits, but I also respected the constraints on their side.\n\nWe agreed not to change the backend, so I adapted on the client side by handling and transforming the response into a structure that fits my architecture. This allowed me to continue development without blocking the team.\n\nThis experience taught me that flexibility is important, and sometimes adapting locally is better than forcing a global change that might impact others.",
+    "q15_staying_current": "I usually follow the official Flutter documentation and release notes, and I also read articles on Medium. I like to follow Flutter developers and see how they explain new features or best practices in real projects.\nI also try to apply what I learn in my projects so I can understand it more deeply.",
+    "q16_code_review": "My approach to code review starts with making sure we follow a consistent structure across the team, so the codebase stays organized and easy to maintain.\n\nWhen reviewing a PR, I first try to understand the new feature.\nThen I go through the code carefully to ensure it works correctly and follows best practices.\n\nI also pay attention to performance — for example, I check if there are unnecessary rebuilds, inefficient logic, or anything that could impact performance. I make sure there are no potential memory leaks and that state management is used properly.\n\nIn general, I focus on writing clean, readable, and maintainable code, and I try to give clear and constructive feedback.\n\nFor me, a good PR is one that is clear, well-structured, and easy to understand.",
+    "q17_ai_usage": "I used AI tools like ChatGPT to help me understand some concepts and improve my answers. I didn’t rely on it completely, I made sure I understood everything and tested it myself before using it."
+  },
+  "submissions": {
+    "q18_video_url": null,
+    "q19_github_repo_url": "https://github.com/AsmaaElsheref/flutter-developer-assessment",
+    "q20_anything_else": null
+  }
+}
